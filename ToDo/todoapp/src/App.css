@@ -1,0 +1,56 @@
+.formDiv{
+    padding-top: 50px;
+    width: 50%;
+}
+
+#title{
+    padding-top: 30px;
+    font-size: 70px;
+    font-weight: 600;
+    background-image: radial-gradient(#553c9a, #ee4b2b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bolder;
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#listItem{
+    display: flex;
+    justify-content: space-between;
+    border : 1px solid orange;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    
+}
+.list-group{
+    margin-top: 5spx;
+}
+
+.checked{
+    text-decoration:line-through;
+    
+}
+.titleDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox{
+    margin-right: 30px;
+
+}
+
+#listDiv{
+    margin-top: 50px;
+}
+
+
