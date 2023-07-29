@@ -1,46 +1,22 @@
-import './App.css';
-import axios from 'axios';
-import {useState,useEffect} from "react";
-import searcMovies from "./api";
+import "./App.css";
+import Discover from "./components/Discover";
+import Watchlist from "./components/Watchlist";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 function App() {
-
-  const [movies, setMovies] = useState([]);
-
-
-
-  const fetchData = async (term) =>{
-    const fetchedMovies = await searcMovies(term);
-    setMovies(fetchedMovies);
-  };
-
-
-
- 
-
-
-
-
-
-  
   return (
     <div className="App">
-      {movies.length > 0 ? (
-        <>
-          <h1>{movies[0].original_title}</h1>
-          <img
-            src={`http://image.tmdb.org/t/p/w500/${movies[0].poster_path}`}
-            alt=""
-          />
-        </>
-      ) : (
-        <p>Loading...</p>
-      )}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/discover" element={<Discover />} />
+        <Route path="/watchlist" element={<Watchlist />} />
+        <Route path="/search" element={<div>Search</div>} />
+      </Routes>
     </div>
   );
 }
 
-
 export default App;
-
-
